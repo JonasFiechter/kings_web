@@ -125,6 +125,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'kings_web/templates/static',
+    BASE_DIR / 'landing_page/static',
 ]
 
 # Default primary key field type
