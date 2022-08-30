@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
+    'landing_page',
 ]
 
 MIDDLEWARE = [
@@ -57,7 +58,10 @@ ROOT_URLCONF = 'kings_web.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'kings_web/templates'],
+        'DIRS': [
+                    BASE_DIR / 'kings_web/templates',
+                    BASE_DIR / 'kings_web/templates/partials'
+                ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

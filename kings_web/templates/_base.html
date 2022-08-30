@@ -10,9 +10,14 @@
   <link rel="stylesheet" href="{% static 'vendor/css/styles.css' %}"/>
 </head>
 <body>
-  {% block 'body' %}{% endblock %}
+  {% block 'header' %}
+    {% include '_header.html' %}
+  {% endblock %}
+  <main>
+    {% block 'main' %}{% endblock %}
+  </main>
+  {% block 'footer' %}
+    {% include '_footer.html' %}
+  {% endblock %}
 </body>
-<footer>
-  {% block 'footer' %}{% endblock %}
-</footer>
 </html>
