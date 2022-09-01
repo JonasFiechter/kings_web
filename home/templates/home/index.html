@@ -1,6 +1,6 @@
 {% extends '_base.html' %}
 {% block 'title' %}Kings Home{% endblock %}
-{% block 'body' %}
+{% block 'main' %}
   <h1>Hello World - Home</h1>
   <p>
     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut eos repellat perspiciatis rerum, 
@@ -13,4 +13,7 @@
       </code>
     </pre>
   </p>
+  {% for post in object_list %}
+    {{ post.post_title }}
+  {% endfor %}
 {% endblock %}
