@@ -1,11 +1,5 @@
-from django.views.generic import ListView
-from django.shortcuts import render
-from .models import Post
+from django.views.generic.base import TemplateView
 
-# Create your views here.
-def home_view(request):
-    return render(request, 'home/index.html')
 
-class PersonList(ListView):
-    template_name = 'home/index.html'
-    model = Post
+class HomeView(TemplateView):
+    template_name: str = 'home/index.html'
