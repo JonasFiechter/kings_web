@@ -32,3 +32,8 @@
 .s1 article p {
     padding-left: 2rem;
 }
+
+.s1 .btn-scroll-down {
+    position: fixed;
+    bottom: 1vh;
+}
