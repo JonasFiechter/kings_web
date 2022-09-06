@@ -5,6 +5,10 @@
     Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
