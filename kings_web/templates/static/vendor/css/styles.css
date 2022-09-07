@@ -29,6 +29,7 @@ ul {
 
 section {
     min-height: 100vh;
+    max-height: 100vh;
 }
 
 .nav-top {
@@ -38,4 +39,9 @@ section {
     color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.8);
     position: fixed;
+}
+
+.main-content {
+    max-width: 1200px;
+    padding: 2rem;
 }
