@@ -3,38 +3,45 @@
 {% block 'main' %}
 {% load static %}
   <main>
-    <section class="section1">
-      <div class="main-content">
+    <section id="intro" class="section1">
+      <div class="header-spacer"></div>
+      <div class="section-content main-content">
         <header>
           <h1><span id="dynamic-title">.Meet</span></h1>
-          <img class="img-section1" src="{% static 'vendor/img/logo_kings_001.png' %}" alt="">
+          <img 
+            class="img-section1" 
+            src="{% static 'vendor/img/logo_kings_001.png' %}" 
+            alt=""
+          >
         </header>
         <article>
           <h2>First article title</h2>
           <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur iusto, laborum 
-              cumque odit voluptate quos hic maiores minima quas! Cupiditate atque at enim 
-              perferendis minus quibusdam reprehenderit magni maiores iure!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur iusto, laborum 
-              cumque odit voluptate quos hic maiores minima quas! Cupiditate atque at enim 
-              perferendis minus quibusdam reprehenderit magni maiores iure!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur 
+              iusto, laborum cumque odit voluptate quos hic maiores minima quas! 
+              Cupiditate atque at enim perferendis minus quibusdam reprehenderit 
+              magni maiores iure! Lorem ipsum dolor sit amet consectetur 
+              adipisicing elit. Tenetur iusto
           </p>
         </article>
       </div>
     </section>
-    <section class="section">
-      <a class="btn-scroll-up btn-scroll" href="#s1">Scroll</a>
-      <header>
-        <h1>Section title</h1>
-      </header>
-      <article>
-        <h2>First article title</h2>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur iusto, laborum 
-            cumque odit voluptate quos hic maiores minima quas! Cupiditate atque at enim 
-            perferendis minus quibusdam reprehenderit magni maiores iure!
-        </p>
-      </article>
+    <section id="history" class="section2">
+      <div class="header-spacer"></div>
+      <div class="section-content">
+        <header>
+          <h1>Section title</h1>
+        </header>
+        <article>
+          <h2>First article title</h2>
+          <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur 
+              iusto, laborum cumque odit voluptate quos hic maiores minima quas! 
+              Cupiditate atque at enim perferendis minus quibusdam reprehenderit 
+              magni maiores iure!
+          </p>
+        </article>
+      </div>
     </section>
   </main>
   <script src="{% static 'vendor/js/landing_page_script.js' %}"></script>

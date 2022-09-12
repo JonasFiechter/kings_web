@@ -7,6 +7,11 @@
 
 a {
     text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: rgb(33, 33, 167);
 }
 
 html {
@@ -32,16 +37,40 @@ section {
     max-height: 100vh;
 }
 
-.nav-top {
+.main-content {
+    width: 1200px;
     padding: 2rem;
-    display: flex;
-    width: 100%;
-    color: rgb(255, 255, 255);
-    background-color: rgba(0, 0, 0, 0.8);
-    position: fixed;
+    margin: 0 auto;
 }
 
-.main-content {
-    max-width: 1200px;
+.menu {
+    color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+
+}
+
+.nav-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.landing-menu {
+    display: flex;
+}
+
+.landing-menu li a {
+    display: block;
     padding: 2rem;
+}
+
+.header-spacer {
+    display: flex;
+    height: 64px;
 }
