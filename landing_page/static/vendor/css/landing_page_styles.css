@@ -1,5 +1,4 @@
 .section-content {
-    
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -15,13 +14,11 @@
 }
 
 .section-content header h1 {
-    display: block;
     font-size: 5rem;
 }
 
 .section-content article {
     flex: 1 1 480px;
-    max-width: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,10 +39,17 @@
 }
 
 .img-section1 {
-    width: 280px;
+    max-width: 60%;
 }
 
 .section1 {
     display: flex;
-    background-color: rgba(137, 43, 226, 0.486);
+}
+
+@media (max-width: 800px) {
+    .main-content {
+        max-width: 100%;
+        display: flex;
+    }
+
 }

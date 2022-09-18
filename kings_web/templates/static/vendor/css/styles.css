@@ -34,11 +34,12 @@ ul {
 
 section {
     min-height: 100vh;
-    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .main-content {
-    width: 1200px;
+    max-width: 1200px;
     padding: 2rem;
     margin: 0 auto;
 }
@@ -49,8 +50,6 @@ section {
     top: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-
 }
 
 .nav-top {
@@ -71,6 +70,5 @@ section {
 }
 
 .header-spacer {
-    display: flex;
     height: 64px;
 }
