@@ -1,4 +1,26 @@
+.bg-img-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-img img {
+    height: 100vh;
+    opacity: 0.2;
+}
+
 .section-content {
+    height: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -6,8 +28,16 @@
     justify-content: center;
 }
 
-.section-content header {
+.section-content img {
+    padding: 2rem;
+    align-self: center;
+    height: auto;
+    max-width: 40%;
     flex: 1 1 480px;
+}
+
+.section-content header {
+    flex: 0.2 1 480px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,14 +48,12 @@
 }
 
 .section-content article {
-    flex: 1 1 480px;
-    display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.445);
-    border-radius: 6rem 0 0 0;
+    background-color: rgba(158, 158, 158, 0.95);
+    border-radius: 3rem 0 0 0;
     box-shadow: 1rem 1rem 1rem rgb(0, 0, 0);
-    padding: 4rem;
+    padding: 2rem;
 }
 
 .section-content article h2 {
@@ -35,11 +63,7 @@
 
 .section-content article p {
     text-align: justify;
-    padding-left: 5rem;
-}
-
-.img-section1 {
-    max-width: 60%;
+    padding-left: 2rem;
 }
 
 .section1 {
@@ -50,6 +74,18 @@
     .main-content {
         max-width: 100%;
         display: flex;
+        padding: 1rem;
+    }
+
+    .section-content {
+        min-height: 100vh;
+    }
+
+    .bg-img img {
+        align-self: center;
+        height: auto;
+        max-width: 90%;
+        opacity: 0.2;
     }
 
 }
