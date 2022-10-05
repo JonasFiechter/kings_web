@@ -36,20 +36,10 @@
     flex: 1 1 480px;
 }
 
-.section-content header {
-    flex: 0.2 1 480px;
-    display: flex;
+.section-content article {
+    flex: 1 1 480px;
     flex-direction: column;
     align-items: center;
-}
-
-.section-content header h1 {
-    font-size: 5rem;
-}
-
-.section-content article {
-    flex-direction: column;
-    justify-content: center;
     background-color: rgba(158, 158, 158, 0.95);
     border-radius: 3rem 0 0 0;
     box-shadow: 1rem 1rem 1rem rgb(0, 0, 0);
@@ -57,13 +47,14 @@
 }
 
 .section-content article h2 {
+    font-size: 5rem;
     display: block;
     padding-bottom: 2rem;
 }
 
-.section-content article p {
-    text-align: justify;
-    padding-left: 2rem;
+article p {
+    font-size: 2rem;
+
 }
 
 .section1 {
