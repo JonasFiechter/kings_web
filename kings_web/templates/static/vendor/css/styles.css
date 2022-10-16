@@ -23,12 +23,6 @@ body {
     font-size: 2rem;
 }
 
-@media (max-width: 800px) {
-    body {
-        background-color: rgb(49, 60, 88);
-    }
-}
-
 header {
     font-size: 2rem;
 }
