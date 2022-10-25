@@ -21,6 +21,7 @@ html {
 
 body {
     font-size: 2rem;
+    background-color: gray;
 }
 
 header {
@@ -69,5 +70,21 @@ section {
 }
 
 .header-spacer {
+    display: block;
     height: 64px;
+    width: 100%;
+}
+
+@media (max-width: 800px) {
+    .header-spacer {
+        display: none;
+    }
+
+    html {
+        /* font-size: 50%; */
+    }
+
+    .main-content {
+        padding: 1rem;
+    }
 }
