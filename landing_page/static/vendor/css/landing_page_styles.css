@@ -23,6 +23,10 @@ p {
     opacity: 0.1;
 }
 
+.max-wide {
+    width: 120rem;
+}
+
 .section-content {
     flex-grow: 1;
     min-height: 100%;
@@ -37,8 +41,21 @@ p {
 
 .img-section {
     max-width: 80%;
+    min-width: 70%;
     align-self: center;
     justify-self: center;
+}
+
+.ul-prices {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.ul-prices li {
+    height: 3rem;
+    width: 3rem;
+    background-color: blue;
 }
 
 section article, section header {
