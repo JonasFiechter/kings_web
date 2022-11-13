@@ -2,6 +2,12 @@ p {
     text-align: justify;
 }
 
+section div ul {
+    list-style: circle;
+    list-style-position: inside;
+    font-style: italic;
+}
+
 .bg-img-container {
     display: flex;
     width: 100%;
