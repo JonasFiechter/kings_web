@@ -38,6 +38,14 @@ section {
     flex-direction: column;
 }
 
+.main-footer {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 15rem;
+    color: white;
+    align-items: center;
+}
+
 .main-content {
     max-width: 1200px;
     padding: 2rem;
