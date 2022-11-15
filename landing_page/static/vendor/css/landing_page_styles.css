@@ -8,6 +8,7 @@ section div ul {
     font-style: italic;
 }
 
+
 .bg-img-container {
     display: flex;
     width: 100%;
@@ -80,7 +81,7 @@ section article, section header {
     .bg-img img {
         align-self: center;
         height: auto;
-        max-width: 100%;
+        max-width: 120%;
         opacity: 0.2;
     }
 

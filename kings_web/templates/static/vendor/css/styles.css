@@ -88,11 +88,15 @@ section {
         display: none;
     }
 
-    html {
-        /* font-size: 50%; */
-    }
-
     .main-content {
         padding: 1rem;
+    }
+
+    .main-footer {
+        display: flex;
+        flex-direction: row;
+        flex-flow: wrap;
+        height: 30rem;
+        text-align: center;
     }
 }
