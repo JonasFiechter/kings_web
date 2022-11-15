@@ -53,21 +53,31 @@ section div ul {
     justify-self: center;
 }
 
-.ul-prices {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
-}
-
-.ul-prices li {
-    height: 3rem;
-    width: 3rem;
-    background-color: blue;
-}
-
 section article, section header {
     align-self: center;
     justify-content: center;
+}
+
+tbody tr th {
+    height: 6rem;
+    background-color: rgba(40, 34, 114, 0.411);
+}
+
+.table-section {
+    flex-grow: 1;
+    display: flex;
+    min-width: 90%;
+    max-width: 100%;
+}
+
+.table-background-black {
+    background-color: rgba(0, 0, 0, 0.377);
+    color: white;
+}
+
+.ul-prices {
+    padding-top: 2rem;
+    flex-grow: 1;
 }
 
 @media (max-width: 800px) {
@@ -88,6 +98,16 @@ section article, section header {
     .section2 .section-content {
         display: grid;
         grid-template-rows: 0.5fr 1fr;
+    }
+
+    .toggle-menu-btn {
+        display: block;
+        width: 6rem;
+        height: 6rem;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
     }
 
 }

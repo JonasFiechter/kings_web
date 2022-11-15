@@ -42,7 +42,7 @@ section {
     display: flex;
     background-color: rgba(0, 0, 0, 0.8);
     height: 15rem;
-    color: white;
+    color: gray;
     align-items: center;
 }
 
@@ -92,11 +92,20 @@ section {
         padding: 1rem;
     }
 
+    .menu {
+        display: none;
+        text-align: center;
+    }
+
+    .nav-top, .nav-top ul {
+        flex-direction: column;
+    }
+
     .main-footer {
         display: flex;
         flex-direction: row;
         flex-flow: wrap;
-        height: 30rem;
+        height: 25rem;
         text-align: center;
     }
 }
