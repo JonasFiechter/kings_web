@@ -61,7 +61,8 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
                     BASE_DIR / 'kings_web/templates',
-                    BASE_DIR / 'kings_web/templates/partials'
+                    BASE_DIR / 'kings_web/templates/partials',
+                    BASE_DIR / 'profiles/templates/profiles',
                 ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -127,6 +128,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'kings_web/templates/static',
     BASE_DIR / 'landing_page/static',
+    BASE_DIR / 'profiles/static',
 ]
 
 # Default primary key field type

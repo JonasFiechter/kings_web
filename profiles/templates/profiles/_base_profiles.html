@@ -1,0 +1,13 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block 'header' %}{% endblock %}
+{% block 'main' %}
+  <section class="main-content auth-section">
+    <div class="logo-container">
+      <img src="{% static 'vendor/img/logo_kings_001.png' %}" alt="">
+    </div>
+    <div class="form-container">
+      {% block 'auth_form' %}{% endblock %}
+    </div>
+  </section>
+{% endblock %}
