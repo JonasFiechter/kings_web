@@ -20,5 +20,6 @@ from landing_page.views import LandingPageView
 urlpatterns = [
     path('admin/', admin.site.urls, name=admin),
     path('', LandingPageView.as_view(), name='landing_page'),
-    path('home/', include('home.urls'))
+    path('home/', include('home.urls')),
+    path('profiles/', include('profiles.urls'))
 ]
