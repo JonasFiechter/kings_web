@@ -1,23 +1,82 @@
 .auth-section {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    background-color: blanchedalmond;
+    flex-flow: row wrap;
+    flex-direction: column;
 }
 
 .logo-container {
+    flex-grow: 1;
     display: flex;
-    background-color: rgb(0, 86, 156);
-    align-items: center;
+    justify-content: center;
+    max-height: 50vh;
 }
 
-.logo-container img {
+.img-container {
+    display: flex;
+}
+
+.img-container a {
     margin: 0 auto;
-    width: 30%;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .form-container {
-    flex-grow: 100%;
-    background-color: blue;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.login-form {
+    min-width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.login-form div {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-container {
+    padding-top: 6rem;
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+input {
+    border-radius: 0.5rem;
+    border-style: none;
+    height: 3rem;
+}
+
+button {
+    background-color: rgb(8, 8, 99);
+    border-radius: 0.5rem;
+    border-style: none;
+    color: white;
+    font-size: large;
+    height: 4rem;
+    width: 90%;
+    font-weight: 500;
+}
+
+.login-form a {
+    background-color: rgb(8, 8, 99);
+    border-radius: 0.5rem;
+    border-style: none;
+    color: white;
+    font-size: large;
+    height: 4rem;
+    width: 90%;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

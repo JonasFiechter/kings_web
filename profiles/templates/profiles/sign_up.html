@@ -1,6 +1,6 @@
 {% extends '_base_profiles.html' %}
 {% load static %}
-{% block 'title' %}Login{% endblock %}
+{% block 'title' %}Cadastro{% endblock %}
 {% block 'auth_form' %}
   <form method="POST" class="login-form">
     {% csrf_token %}
@@ -12,9 +12,13 @@
       <label for="password">Senha</label>
       <input type="text" id="password">
     </div>
+    <div> 
+        <label for="password">Confirmar senha</label>
+        <input type="text" id="password">
+      </div>
     <div class="btn-container">
       <button type="submit">Entrar</button>
-      <a href="{% url 'sign_up' %}">Cadastre-se</a>
+      <a href="{% url 'login' %}">Ir para Login</a>
     </div>
   </form>
 {% endblock %}

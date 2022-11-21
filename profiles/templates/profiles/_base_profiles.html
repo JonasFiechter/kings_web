@@ -4,7 +4,16 @@
 {% block 'main' %}
   <section class="main-content auth-section">
     <div class="logo-container">
-      <img src="{% static 'vendor/img/logo_kings_001.png' %}" alt="">
+      <div class="img-container">
+        <a href="{% url 'landing_page' %}">
+          <img 
+            href="{% url 'landing_page' %}" 
+            target="_blank" 
+            src="{% static 'vendor/img/logo_kings_001.png' %}" 
+            alt=""
+          >
+        </a>
+      </div>
     </div>
     <div class="form-container">
       {% block 'auth_form' %}{% endblock %}
