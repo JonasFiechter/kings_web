@@ -3,10 +3,15 @@
 {% block 'header' %}{% endblock %}
 {% block 'main' %}
   <section class="main-content auth-section">
+    {% if message %}
+      <div class="msg-container">
+        <h3>{{ message }}</h3>
+      </div>
+    {% endif %}
     <div class="logo-container">
       <div class="img-container">
         <a href="{% url 'landing_page' %}">
-          <img 
+          <img
             href="{% url 'landing_page' %}" 
             target="_blank" 
             src="{% static 'vendor/img/logo_kings_001.png' %}" 
