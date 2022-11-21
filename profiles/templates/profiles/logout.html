@@ -1,0 +1,11 @@
+{% extends '_base_profiles.html' %}
+{% load static %}
+{% block 'title' %}Login{% endblock %}
+{% block 'auth_form' %}
+  <div class="logout-container">
+    {% if not user.is_authenticated %}
+      <h1>Você deslogou com sucesso!</h1>
+    {% endif %}
+    <a href="{% url 'landing_page' %}">Voltar ao início</a>
+  </div>
+{% endblock %}

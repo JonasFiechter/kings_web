@@ -10,7 +10,11 @@
       <li><a href="#methodology">Metodologia</a></li>
       <li><a href="#valores">Valores</a></li>
       <li><a href="">Contact</a></li>
-      <li><a href="{% url 'login' %}">LogIn</a></li>
+      {% if user.is_authenticated %}
+        <li><a href="{% url 'logout' %}">Log out</a></li>
+      {% else %}
+        <li><a href="{% url 'login' %}">LogIn</a></li>
+      {% endif %}
     </ul>
   </nav>
 </aside>
