@@ -4,7 +4,7 @@
 {% block 'auth_form' %}
   <div class="logout-container">
     {% if not user.is_authenticated %}
-      <h1>Você deslogou com sucesso!</h1>
+      <h1>Você saiu com sucesso!</h1>
     {% endif %}
     <a href="{% url 'landing_page' %}">Voltar ao início</a>
   </div>

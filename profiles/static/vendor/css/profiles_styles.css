@@ -1,3 +1,8 @@
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
 .auth-section {
     display: flex;
     justify-content: center;
@@ -30,6 +35,10 @@
 
 .img-container a {
     margin: 0 auto;
+}
+
+.img-container a img {
+    animation: fadeIn ease 5s;
 }
 
 img {

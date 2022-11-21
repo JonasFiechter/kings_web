@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.models import User
 from django.contrib import auth
 
 
@@ -22,14 +23,14 @@ def profiles_login_view(request):
     return render(request, 'profiles/login.html', {'message': message})
 
 def profiles_sign_up_view(request):
-    username = request.POST.get('email')
+    email = request.POST.get('email')
     password = request.POST.get('password')
     password2 = request.POST.get('password2')
     message = ''
 
     if request.method == 'POST':
         # checking
-        if not username:
+        if not email or '@' not in email:
             message = 'Email inválido'
         
         elif password != password2:
@@ -37,7 +38,12 @@ def profiles_sign_up_view(request):
         
         elif len(password) <= 5:
             message = 'A senha deve ter no mínimo 6 caracteres!'
-        
+    
+        else:
+            user = User.objects.create_user(email, email, password)
+            user.save()
+            print(user)
+
     return render(request, 'profiles/sign_up.html', {'message': message})
 
 def profiles_logout_view(request):
