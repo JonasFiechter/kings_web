@@ -9,7 +9,7 @@ def profiles_login_view(request):
     password = request.POST.get('password')
     user = authenticate(request, username=username, password=password)
     message = ''
-    
+
     if request.user.is_authenticated:
         return redirect('home')
 
@@ -38,11 +38,17 @@ def profiles_sign_up_view(request):
         
         elif len(password) <= 5:
             message = 'A senha deve ter no mínimo 6 caracteres!'
+
+        elif User.objects.filter(username=email).exists():
+            message = 'O email inserido já está sendo utilizado!'
     
         else:
             user = User.objects.create_user(email, email, password)
             user.save()
-            print(user)
+            message = 'Usuário criado com sucesso!'
+            return render(request, 'profiles/login.html', {
+                                                    'success_message': message
+                                                })
 
     return render(request, 'profiles/sign_up.html', {'message': message})
 

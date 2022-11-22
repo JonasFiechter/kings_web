@@ -2,5 +2,5 @@ from django.views.generic.base import TemplateView
 from django.shortcuts import render
 
 
-class HomeView(TemplateView):
-    template_name: str = 'home/index.html'
+def home_view(request):
+    return render(request, 'home/index.html')

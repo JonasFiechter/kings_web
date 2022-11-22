@@ -10,6 +10,20 @@
     flex-direction: column;
 }
 
+.success-msg-container {
+    width: 80%;
+    align-self: center;
+    display: flex;
+    padding: 2rem;
+    position: absolute;
+    top: 2rem;
+    background-color: rgba(35, 245, 28, 0.534);
+    justify-content: center;
+    border-radius: 0.5rem;
+    z-index: 1;
+}
+
+
 .msg-container {
     width: 80%;
     align-self: center;

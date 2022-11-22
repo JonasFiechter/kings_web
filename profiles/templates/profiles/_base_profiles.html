@@ -8,6 +8,12 @@
         <h5>{{ message }}</h5>
       </div>
     {% endif %}
+    
+    {% if success_message %}
+      <div class="success-msg-container">
+        <h5>{{ success_message }}</h5>
+      </div>
+    {% endif %}
     <div class="logo-container">
       <div class="img-container">
         <a href="{% url 'landing_page' %}">
