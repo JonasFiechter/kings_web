@@ -1,18 +1,32 @@
 {% extends '_base.html' %}
+{% load static %}
 {% block 'title' %}Kings Home{% endblock %}
+{% block 'header' %}
+  {% include '_home_header.html' %}  
+{% endblock %}
 {% block 'main' %}
-  <h1>Hello World - Home</h1>
-  <p>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut eos repellat perspiciatis rerum, 
-    iure reprehenderit cumque tenetur quas consectetur maiores, tempore odio obcaecati dolore non ut 
-    itaque illum. Earum, repudiandae?
-    <pre>
-      <code>
-        def example(item):
-          return item
-      </code>
-    </pre>
-  </p>
+  <section class="main-content">
+    <div class="header-spacer"></div>
+    <div class="post-card">
+      <div class="title-container">
+        <h2>POST TITLE TEST</h2>
+      </div>
+      <div class="img-container">
+        <img src="{% static 'vendor/img/mock_img_001.jfif' %}" alt="">
+      </div>
+      <div class="text-container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis 
+          quibusdam expedita sequi, quod alias dolore repellat libero sapiente 
+          voluptates deserunt itaque quae, possimus nam tenetur nobis adipisci 
+          tempore ullam. Autem?
+        </p>
+      </div>
+      <div class="footer-container">
+        <h5>Autor tester</h5>
+        <h5>25 de abril de 2012</h5>
+      </div>
+    </div>
+  </section>
   {% for post in object_list %}
     {{ post.post_title }}
   {% endfor %}

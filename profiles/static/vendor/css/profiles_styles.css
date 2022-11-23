@@ -1,8 +1,39 @@
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
 .auth-section {
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
     flex-direction: column;
+}
+
+.success-msg-container {
+    width: 80%;
+    align-self: center;
+    display: flex;
+    padding: 2rem;
+    position: absolute;
+    top: 2rem;
+    background-color: rgba(35, 245, 28, 0.534);
+    justify-content: center;
+    border-radius: 0.5rem;
+    z-index: 1;
+}
+
+
+.msg-container {
+    width: 80%;
+    align-self: center;
+    display: flex;
+    padding: 2rem;
+    position: absolute;
+    top: 2rem;
+    background-color: rgba(245, 28, 28, 0.507);
+    justify-content: center;
+    border-radius: 0.5rem;
 }
 
 .logo-container {
@@ -18,6 +49,10 @@
 
 .img-container a {
     margin: 0 auto;
+}
+
+.img-container a img {
+    animation: fadeIn ease 5s;
 }
 
 img {
@@ -67,7 +102,7 @@ button {
     font-weight: 500;
 }
 
-.login-form a {
+.login-form a, .logout-container a {
     background-color: rgb(8, 8, 99);
     border-radius: 0.5rem;
     border-style: none;
@@ -79,4 +114,14 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.logout-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logout-container h1 {
+    padding: 2rem;
 }

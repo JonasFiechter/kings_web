@@ -1,0 +1,27 @@
+.post-card {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    background-color: gainsboro;
+    border-radius: 0.7rem;
+    margin-bottom: 1rem;
+    max-width: 80rem;
+}
+
+.post-card div {
+    padding: 1rem;
+}
+
+.img-container {
+    height: 30rem;
+}
+
+.img-container img {
+    border-radius: 1rem;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,5 +1,8 @@
 from django.views.generic.base import TemplateView
+from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 
 
-class HomeView(TemplateView):
-    template_name: str = 'home/index.html'
+@login_required(login_url='login')
+def home_view(request):
+    return render(request, 'home/index.html')
