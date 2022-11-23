@@ -1,0 +1,14 @@
+{% load static %}
+<aside class="menu">
+  <nav class="nav-top main-content">
+    <h1>Kings English School</h1>
+    <ul class="landing-menu">
+      {% if user.is_authenticated %}
+        <li><a href="{% url 'logout' %}">Sair</a></li>
+      {% else %}
+        <li><a href="{% url 'login' %}">Entrar</a></li>
+      {% endif %}
+    </ul>
+  </nav>
+</aside>
+<script src="{% static 'vendor/js/script.js' %}"></script>

@@ -63,6 +63,7 @@ TEMPLATES = [
                     BASE_DIR / 'kings_web/templates',
                     BASE_DIR / 'kings_web/templates/partials',
                     BASE_DIR / 'profiles/templates/profiles',
+                    BASE_DIR / 'home/templates/profiles',
                 ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -129,6 +130,7 @@ STATICFILES_DIRS = [
     BASE_DIR / 'kings_web/templates/static',
     BASE_DIR / 'landing_page/static',
     BASE_DIR / 'profiles/static',
+    BASE_DIR / 'home/static',
 ]
 
 # Default primary key field type
