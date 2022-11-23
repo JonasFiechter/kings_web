@@ -15,7 +15,7 @@ class Post(models.Model):
         )
     post_img = models.ImageField(
             verbose_name='Img', 
-            upload_to='blog/posts/%d/%m/%Y',
+            upload_to='blog/posts/%d/%m/%Y/',
             null=True
         )
     post_date = models.DateTimeField(
