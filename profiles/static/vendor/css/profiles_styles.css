@@ -91,7 +91,7 @@ input {
     height: 3rem;
 }
 
-button {
+.btn-container button {
     background-color: rgb(8, 8, 99);
     border-radius: 0.5rem;
     border-style: none;

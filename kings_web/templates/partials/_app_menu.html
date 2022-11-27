@@ -1,0 +1,31 @@
+{% load static %}
+<aside class="app-menu">
+  <nav>
+    <ul>
+      <li>
+        <button 
+          class="unclicked" 
+          onclick="buttonClickedEffect(this, '#')">
+          <i id="test" class="fa-solid fa-dollar"></i>
+           BILLING
+        </button>
+      </li>
+      <li>
+        <button 
+          class="unclicked" 
+          onclick="buttonClickedEffect(this, '{% url 'home' %}')">
+          <i class="fa-solid fa-home"></i>
+          HOME
+        </button>
+      </li>
+      <li>
+        <button
+          class="unclicked"
+          onclick="buttonClickedEffect(this, '{% url 'home' %}')">
+          <i class="fa-solid fa-user"></i>
+          PROFILE
+        </button>
+      </li>
+    </ul>
+  </nav>
+</aside>
