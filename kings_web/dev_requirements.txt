@@ -1,2 +1,3 @@
 django-allauth
 pillow
+fontawesomefree==6.2.1

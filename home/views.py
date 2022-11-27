@@ -8,9 +8,6 @@ from .models import Post
 def home_view(request):
     posts = Post.objects.all()
 
-    for post in posts:
-        print(post.post_img.url)
-
     return render(request, 'home/index.html', {
         'posts': posts
     })
