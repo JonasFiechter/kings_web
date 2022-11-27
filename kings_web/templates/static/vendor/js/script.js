@@ -9,3 +9,8 @@ function toggleMenu() {
         headerMenu.style.display = 'flex';
     }
 };
+
+function buttonClickedEffect(obj, url) {
+    obj.classList.add('clicked');
+    window.location.replace(url)
+};

@@ -83,9 +83,20 @@ section {
     width: 100%;
 }
 
+.app-menu {
+    display: none;
+}
+
 @media (max-width: 800px) {
     .header-spacer {
         display: none;
+    }
+
+    .footer-spacer {
+        display: block;
+        bottom: 0;
+        width: 100%;
+        height: 7rem;
     }
 
     .main-content {
@@ -110,7 +121,7 @@ section {
     }
 
     .app-menu {
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(0, 0, 0, 0.95);
         position: fixed;
         bottom: 0;
         left: 0;
@@ -132,7 +143,6 @@ section {
     }
 
     .app-menu nav ul button {
-        color: white;
         border: 0;
         background-color: transparent;
         height: 100%;
@@ -147,7 +157,11 @@ section {
         font-size: 2rem;
     }
 
-    .selected {
-        color: blueviolet;
+    .unclicked {
+        color: white;
+    }
+
+    .clicked {
+        color: rgb(255, 121, 121);
     }
 }
