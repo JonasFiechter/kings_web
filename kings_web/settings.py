@@ -10,6 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
+#TODO: Create multi-language templates;
+#TODO: Change database to mySQL;
+
 from pathlib import Path
 # utils imports
 from utils.encrypter import read_key

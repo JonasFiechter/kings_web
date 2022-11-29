@@ -6,6 +6,8 @@ from django.contrib import auth
 from .models import Profile
 
 
+#TODO: Finish profile index template add logout button
+#TODO: Create a profile form (only for admins)
 @login_required(login_url='login')
 def profiles_profile_view(request):
     profile = Profile.objects.get(email=request.user.id)
