@@ -1,0 +1,21 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block 'title' %}Perfil{% endblock %}
+{% block 'header' %}
+  {% include '_home_header.html' %}  
+{% endblock %}
+{% block 'main' %}
+  <section class="main-content">
+    <div class="header-spacer"></div>
+    <article>
+      <h1>{{ profile.full_name }}</h1>
+      <ul>
+        <li>{{ profile.birth_date }}</li>
+        <li>{{ profile.address }}</li>
+        <li>{{ profile.phone_1 }}</li>
+      </ul>
+    </article>
+    {% include '_app_menu.html' %}
+  </section>
+{% endblock %}
+{% block 'footer' %}{% endblock %}

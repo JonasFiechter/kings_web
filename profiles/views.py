@@ -1,8 +1,16 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib import auth
+from .models import Profile
 
+
+@login_required(login_url='login')
+def profiles_profile_view(request):
+    profile = Profile.objects.get(email=request.user.id)
+    print(profile.full_name)
+    return render(request, 'profiles/index.html', {'profile': profile})
 
 def profiles_login_view(request):
     username = request.POST.get('email')
