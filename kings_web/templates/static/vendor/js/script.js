@@ -14,5 +14,3 @@ function buttonClickedEffect(obj, url) {
     obj.classList.add('clicked');
     window.location.replace(url)
 };
-
-console.log('working')
