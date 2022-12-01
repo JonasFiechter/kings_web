@@ -4,6 +4,7 @@
     <h1>Kings English School</h1>
     <ul class="landing-menu">
       {% if user.is_authenticated %}
+        <li><a href="{% url 'profile' %}">Perfil</a></li>
         <li><a href="{% url 'logout' %}">Sair</a></li>
       {% else %}
         <li><a href="{% url 'login' %}">Entrar</a></li>
@@ -11,4 +12,4 @@
     </ul>
   </nav>
 </aside>
-<script src="{% static 'vendor/js/script.js' %}"></script>
+<script src="{% static 'vendor/js/home_script.js' %}"></script>

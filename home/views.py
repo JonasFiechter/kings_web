@@ -7,6 +7,7 @@ from .models import Post
 @login_required(login_url='login')
 def home_view(request):
     posts = Post.objects.all()
+    print(request)
 
     return render(request, 'home/index.html', {
         'posts': posts
