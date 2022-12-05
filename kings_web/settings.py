@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'home',
     'landing_page',
     'profiles',
+    'billing',
 ]
 
 MIDDLEWARE = [

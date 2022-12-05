@@ -1,0 +1,18 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block 'title' %}Perfil{% endblock %}
+{% block 'header' %}
+  {% include '_home_header.html' %}  
+{% endblock %}
+{% block 'main' %}
+  <section class="main-content">
+    <div class="header-spacer"></div>
+    <article>
+      {% if not profile %}
+        <h1>Você não possui um cadastro completo na Kings</h1>
+        <h2>Entre em contato via ############</h2>
+      {% endif %}
+    {% include '_app_menu.html' %}
+  </section>
+{% endblock %}
+{% block 'footer' %}{% endblock %}
