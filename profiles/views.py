@@ -10,8 +10,10 @@ from .models import Profile
 #TODO: Create a profile form (only for admins)
 @login_required(login_url='login')
 def profiles_profile_view(request):
-    profile = Profile.objects.get(email=request.user.id)
-    print(profile.full_name)
+    profile = {}
+    if Profile.objects.filter(email=request.user.id).exists():
+        profile = Profile.objects.get(email=request.user.id)
+        print(profile)
     return render(request, 'profiles/index.html', {'profile': profile})
 
 def profiles_login_view(request):

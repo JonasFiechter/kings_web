@@ -8,6 +8,10 @@
   <section class="main-content">
     <div class="header-spacer"></div>
     <article>
+      {% if not profile %}
+        <h1>Você não possui um cadastro completo na Kings</h1>
+        <h2>Entre em contato via ############</h2>
+      {% endif %}
       <h1>{{ profile.full_name }}</h1>
       <ul>
         <li>{{ profile.birth_date }}</li>

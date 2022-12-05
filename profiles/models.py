@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 class Profile(models.Model):
     email = models.OneToOneField(
-        User, 
+        User,
         null=True, 
         unique=True,
         verbose_name='Email', 
