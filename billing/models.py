@@ -5,12 +5,16 @@ from profiles.models import Profile
 
 #TODO: THIS MODEL NEED TO BE PART OF ITS OWN APP(testing purposes only)
 class Course(models.Model):
+
+    def __str__(self) -> str:
+        return self.name
+
     name = models.CharField(
         verbose_name='Nome do Curso',
         max_length=255,
     )
     teachers = models.ManyToManyField(
-        Profile,
+        User,
         verbose_name='Professor'
     )
     description = models.TextField(
@@ -29,6 +33,12 @@ class Contract(models.Model):
         verbose_name='Titular do contrato',
         on_delete=models.DO_NOTHING,
         null=True
+    )
+    course = models.ForeignKey(
+        Course,
+        verbose_name='Curso',
+        null=True,
+        on_delete=models.DO_NOTHING
     )
     value = models.FloatField(
         verbose_name='Valor',
