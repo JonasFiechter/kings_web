@@ -3,27 +3,48 @@ from django.contrib.auth.models import User
 from profiles.models import Profile
 
 
+#TODO: THIS MODEL NEED TO BE PART OF ITS OWN APP(testing purposes only)
+class Course(models.Model):
+    name = models.CharField(
+        verbose_name='Nome do Curso',
+        max_length=255,
+    )
+    teachers = models.ManyToManyField(
+        Profile,
+        verbose_name='Professor'
+    )
+    description = models.TextField(
+        verbose_name='Descrição do Curso',
+        max_length=1000
+    )
+
 class Contract(models.Model):
     created_at = models.DateField(
         verbose_name='Data de criação', 
-        auto_now_add=True
+        auto_created=True,
+        null=True
     )
     owner = models.ForeignKey(
         User,
         verbose_name='Titular do contrato',
-        on_delete=models.DO_NOTHING
+        on_delete=models.DO_NOTHING,
+        null=True
     )
     value = models.FloatField(
         verbose_name='Valor',
+        null=True
     )
     registration_fee = models.FloatField(
         verbose_name='Matrícula',
+        null=True
     )
     registration_fee_status = models.BooleanField(
-        verbose_name='Status Matrícula'
+        verbose_name='Status Matrícula',
+        null=True
     )
     reference_year = models.IntegerField(
         verbose_name='Ano de referência',
+        null=True
     )
     student = models.ForeignKey(
         Profile,
@@ -32,10 +53,12 @@ class Contract(models.Model):
     )
     comments = models.TextField(
         verbose_name='Comentários',
-        max_length=1000
+        max_length=1000,
+        null=True
     )
     status = models.BooleanField(
-        verbose_name='Status do contrato'
+        verbose_name='Status do contrato',
+        null=True
     )
     tuition_jan = models.BooleanField(
         verbose_name='Janeiro',
