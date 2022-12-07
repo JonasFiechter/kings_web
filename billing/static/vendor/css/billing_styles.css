@@ -1,0 +1,30 @@
+.profile-info-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contract-title {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.contract-months {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.contract-months li {
+    background-color: gainsboro;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    max-width: 12rem;
+    min-width: 10rem;
+    height: 8rem;
+}

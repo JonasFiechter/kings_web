@@ -7,11 +7,34 @@
 {% block 'main' %}
   <section class="main-content">
     <div class="header-spacer"></div>
-    <article>
+    <article class="profile-info-container">
       {% if not profile %}
         <h1>Você não possui um cadastro completo na Kings</h1>
         <h2>Entre em contato via ############</h2>
       {% endif %}
+      <div class="contract-title">
+        <h2>Contrato: 949291</h2>
+        <h3>Títular: TESTADOR OFICIAL</h3>
+      </div>
+      <ul class="contract-months">
+        <li>
+          <div>Janeiro</div>
+          <div>R$ 120,00</div>
+          <div>Status</div>
+        </li>
+        <li>Janeiro</li>
+        <li>Janeiro</li>
+        <li>Janeiro</li>
+        <li>Janeiro</li>
+        <li>Janeiro</li>
+        <li>Janeiro</li>
+        <li>Janeiro</li>
+        <li>Janeiro</li>
+        <li>Janeiro</li>
+        <li>Janeiro</li>
+        <li>Janeiro</li>
+      </ul>
+    </article>
     {% include '_app_menu.html' %}
   </section>
 {% endblock %}

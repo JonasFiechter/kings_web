@@ -13,7 +13,7 @@ def profiles_profile_view(request):
     profile = {}
     if Profile.objects.filter(email=request.user.id).exists():
         profile = Profile.objects.get(email=request.user.id)
-        print(profile)
+        
     return render(request, 'profiles/index.html', {'profile': profile})
 
 def profiles_login_view(request):
