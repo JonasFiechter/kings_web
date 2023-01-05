@@ -21,52 +21,64 @@
           <ul class="contract-months">
             <li>
               <div>Janeiro</div>
-              <div>R$ 120,00</div>
+              <div>{{ contract.tuition_value|floatformat:2 }}</div>
               <div>{{ contract.tuition_jan }}</div>
             </li>
             <li>
               <div>Fevereiro</div>
-              <div>R$ 120,00</div>
+              <div>{{ contract.tuition_value|floatformat:2 }}</div>
               <div>{{ contract.tuition_feb }}</div>
             </li>
             <li>
               <div>Março</div>
-              <div>R$ 120,00</div>
+              <div>{{ contract.tuition_value|floatformat:2 }}</div>
               <div>{{ contract.tuition_mar }}</div>
             </li>
             <li>
               <div>Abril</div>
-              <div>R$ 120,00</div>
+              <div>{{ contract.tuition_value|floatformat:2 }}</div>
               <div>{{ contract.tuition_apr }}</div>
             </li>
             <li>
               <div>Maio</div>
-              <div>R$ 120,00</div>
+              <div>{{ contract.tuition_value|floatformat:2 }}</div>
               <div>{{ contract.tuition_may }}</div>
             </li>
             <li>
               <div>Junho</div>
-              <div>R$ 120,00</div>
+              <div>{{ contract.tuition_value|floatformat:2 }}</div>
               <div>{{ contract.tuition_jun }}</div>
             </li>
             <li>
               <div>Julho</div>
-              <div>R$ 120,00</div>
+              <div>{{ contract.tuition_value|floatformat:2 }}</div>
               <div>{{ contract.tuition_jul }}</div>
             </li>
             <li>
               <div>Agosto</div>
-              <div>R$ 120,00</div>
+              <div>{{ contract.tuition_value|floatformat:2 }}</div>
               <div>{{ contract.tuition_aug }}</div>
             </li>
             <li>
               <div>Setembro</div>
-              <div>R$ 120,00</div>
+              <div>{{ contract.tuition_value|floatformat:2 }}</div>
               <div>{{ contract.tuition_set }}</div>
             </li>
-            <li>{ contract.tuition_oct }</li>
-            <li>{ contract.tuition_nov }</li>
-            <li>{ contract.tuition_dec }</li>
+            <li>
+              <div>Outubro</div>
+              <div>{{ contract.tuition_value|floatformat:2 }}</div>
+              <div>{{ contract.tuition_oct }}</div>
+            </li>
+            <li>
+              <div>Novembro</div>
+              <div>{{ contract.tuition_value|floatformat:2 }}</div>
+              <div>{{ contract.tuition_nov }}</div>
+            </li>
+            <li>
+              <div>Dezembro</div>
+              <div>{{ contract.tuition_value|floatformat:2 }}</div>
+              <div>{{ contract.tuition_dec }}</div>
+            </li>
           </ul>
         </div>
       {% endfor %}

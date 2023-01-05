@@ -44,6 +44,10 @@ class Contract(models.Model):
         verbose_name='Valor',
         null=True
     )
+    tuition_value = models.FloatField(
+        verbose_name='Mensalidade',
+        null=True
+    )
     registration_fee = models.FloatField(
         verbose_name='Matrícula',
         null=True
