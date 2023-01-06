@@ -7,10 +7,11 @@
 {% block 'main' %}
   <section class="main-content">
     <div class="header-spacer"></div>
-    <article>
+    <article class="profile-info-container">
       {% if not profile %}
         <h1>Você não possui um cadastro completo na Kings</h1>
         <h2>Entre em contato via ############</h2>
+        <a href="{% url 'logout' %}">Sair</a>
       {% endif %}
       <h1>{{ profile.full_name }}</h1>
       <ul>

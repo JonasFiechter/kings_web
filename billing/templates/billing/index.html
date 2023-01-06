@@ -1,0 +1,89 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block 'title' %}Financeiro{% endblock %}
+{% block 'header' %}
+  {% include '_home_header.html' %}  
+{% endblock %}
+{% block 'main' %}
+  <section class="main-content">
+    <div class="header-spacer"></div>
+    <article class="profile-info-container">
+      {% if not profile %}
+        <h1>Você não possui um cadastro completo na Kings</h1>
+        <h2>Entre em contato via ############</h2>
+      {% endif %}
+      {% for contract in contracts %}
+        <div class="contract-container">
+          <div class="contract-title">
+            <h2>Contrato: {{ contract.reference_year }}{{ contract.id }}</h2>
+            <h3>Títular: {{ contract.owner }}</h3>
+          </div>
+          <ul class="contract-months">
+            <li>
+              <div>Janeiro</div>
+              <div>{{ contract.tuition_value|floatformat:2 }}</div>
+              <div>{{ contract.tuition_jan }}</div>
+            </li>
+            <li>
+              <div>Fevereiro</div>
+              <div>{{ contract.tuition_value|floatformat:2 }}</div>
+              <div>{{ contract.tuition_feb }}</div>
+            </li>
+            <li>
+              <div>Março</div>
+              <div>{{ contract.tuition_value|floatformat:2 }}</div>
+              <div>{{ contract.tuition_mar }}</div>
+            </li>
+            <li>
+              <div>Abril</div>
+              <div>{{ contract.tuition_value|floatformat:2 }}</div>
+              <div>{{ contract.tuition_apr }}</div>
+            </li>
+            <li>
+              <div>Maio</div>
+              <div>{{ contract.tuition_value|floatformat:2 }}</div>
+              <div>{{ contract.tuition_may }}</div>
+            </li>
+            <li>
+              <div>Junho</div>
+              <div>{{ contract.tuition_value|floatformat:2 }}</div>
+              <div>{{ contract.tuition_jun }}</div>
+            </li>
+            <li>
+              <div>Julho</div>
+              <div>{{ contract.tuition_value|floatformat:2 }}</div>
+              <div>{{ contract.tuition_jul }}</div>
+            </li>
+            <li>
+              <div>Agosto</div>
+              <div>{{ contract.tuition_value|floatformat:2 }}</div>
+              <div>{{ contract.tuition_aug }}</div>
+            </li>
+            <li>
+              <div>Setembro</div>
+              <div>{{ contract.tuition_value|floatformat:2 }}</div>
+              <div>{{ contract.tuition_set }}</div>
+            </li>
+            <li>
+              <div>Outubro</div>
+              <div>{{ contract.tuition_value|floatformat:2 }}</div>
+              <div>{{ contract.tuition_oct }}</div>
+            </li>
+            <li>
+              <div>Novembro</div>
+              <div>{{ contract.tuition_value|floatformat:2 }}</div>
+              <div>{{ contract.tuition_nov }}</div>
+            </li>
+            <li>
+              <div>Dezembro</div>
+              <div>{{ contract.tuition_value|floatformat:2 }}</div>
+              <div>{{ contract.tuition_dec }}</div>
+            </li>
+          </ul>
+        </div>
+      {% endfor %}
+    </article>
+    {% include '_app_menu.html' %}
+  </section>
+{% endblock %}
+{% block 'footer' %}{% endblock %}

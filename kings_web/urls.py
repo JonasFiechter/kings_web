@@ -23,7 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls, name=admin),
     path('', LandingPageView.as_view(), name='landing_page'),
     path('home/', include('home.urls')),
-    path('profiles/', include('profiles.urls'))
+    path('profiles/', include('profiles.urls')),
+    path('billing/', include('billing.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
