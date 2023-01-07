@@ -4,6 +4,8 @@ from billing.models import Contract
 from profiles.models import Profile
 from datetime import datetime
 
+#TODO: Add deadline date to contract
+
 def billing_view(request):
     contracts = Contract.objects.filter(owner=request.user.id)
     contracts_all = Contract.objects.all()

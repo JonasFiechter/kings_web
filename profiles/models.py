@@ -2,6 +2,9 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
+#TODO: Add profession to profile
+#TODO: Profile should create without email
+
 class Profile(models.Model):
 
     def __str__(self):
