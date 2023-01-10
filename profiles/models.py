@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-
 #TODO: Add profession to profile
 #TODO: Profile should create without email
 
@@ -47,6 +46,11 @@ class Profile(models.Model):
     )
     phone_2 = models.CharField(
         verbose_name='Contato 2',
+        max_length=255,
+        null=True
+    )
+    profession = models.CharField(
+        verbose_name='Profissão',
         max_length=255,
         null=True
     )
