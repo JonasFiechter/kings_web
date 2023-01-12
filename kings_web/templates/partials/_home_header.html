@@ -4,9 +4,12 @@
     <h1>Kings English School</h1>
     <ul class="landing-menu">
       {% if user.is_authenticated %}
-        <li id="nav-1"><a href="{% url 'home' %}">Home</a></li>
-        <li id="nav-2"><a href="{% url 'profile' %}">Perfil</a></li>
-          <li id="nav-3"><a  href="{% url 'billing' %}">Financeiro</a></li>
+        {% if user.is_staff %}
+          <li id="nav-1"><a href="/admin">Admin</a></li>
+        {% endif %}
+        <li id="nav-2"><a href="{% url 'home' %}">Home</a></li>
+        <li id="nav-3"><a href="{% url 'profile' %}">Perfil</a></li>
+        <li id="nav-4"><a  href="{% url 'billing' %}">Financeiro</a></li>
         <li><a href="{% url 'logout' %}">Sair</a></li>
       {% else %}
         <li><a href="{% url 'login' %}">Entrar</a></li>

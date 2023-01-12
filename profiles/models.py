@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-#TODO: Add profession to profile
 #TODO: Profile should create without email
 
 class Profile(models.Model):
@@ -21,7 +20,7 @@ class Profile(models.Model):
         verbose_name='Nome Completo',
     )
     birth_date = models.DateField(
-        verbose_name='Data de nascimento', 
+        verbose_name='Data de nascimento',
         null=True
     )
     cpf = models.CharField(
